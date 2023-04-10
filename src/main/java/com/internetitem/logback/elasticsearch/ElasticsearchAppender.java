@@ -41,5 +41,4 @@ public class ElasticsearchAppender extends AbstractElasticsearchAppender<ILoggin
         return new ClassicElasticsearchPublisher(getContext(), errorReporter, settings, elasticsearchProperties, headers);
     }
 
-
 }

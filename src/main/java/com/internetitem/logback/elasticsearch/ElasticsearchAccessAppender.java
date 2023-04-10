@@ -24,5 +24,4 @@ public class ElasticsearchAccessAppender extends AbstractElasticsearchAppender<I
         return new AccessElasticsearchPublisher(getContext(), errorReporter, settings, elasticsearchProperties, headers);
     }
 
-
 }

@@ -10,7 +10,6 @@ public abstract class AbstractPropertyAndEncoder<T> {
 
 	public AbstractPropertyAndEncoder(Property property, Context context) {
 		this.property = property;
-
 		this.layout = getLayout();
 		this.layout.setContext(context);
 		this.layout.setPattern(property.getValue());

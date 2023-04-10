@@ -14,6 +14,9 @@ public class ClassicPropertyAndEncoder extends AbstractPropertyAndEncoder<ILoggi
 
     @Override
     protected PatternLayoutBase<ILoggingEvent> getLayout() {
-        return new PatternLayout();
+        MaskingPatternLayout maskingPatternLayout = new MaskingPatternLayout();
+                maskingPatternLayout.addMaskPattern("\\\"phoneNumber\\\"\\s*:\\s*\\\"(.*?)\\\"");
+        return maskingPatternLayout;
+//        return new PatternLayout();
     }
 }

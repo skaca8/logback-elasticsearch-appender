@@ -7,10 +7,8 @@ public class Settings {
 	private String index;
 	private String type;
 	private URL url;
-
 	private String loggerName;
 	private String errorLoggerName;
-
 	private int sleepTime = 250;
 	private int maxRetries = 3;
 	private int connectTimeout = 30000;
@@ -23,6 +21,8 @@ public class Settings {
 	private int maxQueueSize = 100 * 1024 * 1024;
 	private Authentication authentication;
 	private int maxMessageSize = -1;
+
+	private boolean isMasking;
 
 	public String getIndex() {
 		return index;
@@ -161,5 +161,13 @@ public class Settings {
 
 	public void setMaxMessageSize(int maxMessageSize) {
 		this.maxMessageSize = maxMessageSize;
+	}
+
+	public boolean isMasking() {
+		return isMasking;
+	}
+
+	public void setMasking(boolean masking) {
+		isMasking = masking;
 	}
 }
